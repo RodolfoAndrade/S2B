@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>SENAI</Machine>
+    <WindowsUser>Aluno</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>e1174681-9f73-40e1-a22f-705e47d24c03</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\bin\Debug\ObrasRecife.Windows.exe">
+      <PackagePath>ObrasRecife.Windows.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Shared\pagina.html">
+      <PackagePath>pagina.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\bin\Debug\Page1.xbf">
+      <PackagePath>Page1.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\bin\Debug\Page2.xbf">
+      <PackagePath>Page2.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\bin\Debug\Page3.xbf">
+      <PackagePath>Page3.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\bin\Debug\Page4.xbf">
+      <PackagePath>Page4.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\bin\Debug\Page5.xbf">
+      <PackagePath>Page5.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\bin\Debug\ObrasRecife.Windows.xr.xml">
+      <PackagePath>ObrasRecife.Windows.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

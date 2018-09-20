@@ -1,0 +1,1460 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0092)http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/consulta_geral/consulta_geral.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+   <title>Consulta - </title>
+   
+   <meta http-equiv="Expires" content="Fri, Jan 01 1900 00:00:00 GMT">
+   <meta http-equiv="Last-Modified" content="Tue, 02 Jun 2015 18:39:25 GMT">
+   <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+   <meta http-equiv="Cache-Control" content="post-check=0, pre-check=0">
+   <meta http-equiv="Pragma" content="no-cache">
+   <script type="text/javascript" src="./pagina_files/jquery.js"></script>
+   <script type="text/javascript">var sc_pathToTB = '/scriptcase/prod_scriptcase5/prod/third/jquery_plugin/thickbox/';</script>
+   <script type="text/javascript" src="./pagina_files/thickbox-compressed.js"></script>
+   <link rel="stylesheet" href="./pagina_files/thickbox.css" type="text/css" media="screen">
+   <link rel="stylesheet" type="text/css" href="./pagina_files/Scriptcase5_Silver.css"> 
+   <link rel="stylesheet" href="./pagina_files/portal2012_grid.css" type="text/css" media="screen">
+  <style type="text/css">
+  </style>
+  </head>
+  <body class="scGridPage" style="">
+   <form name="F3" method="post" action="./pagina_files/pagina.html" target="_self" style="display: none"> 
+    <input type="hidden" name="nmgp_chave" value="">
+    <input type="hidden" name="nmgp_opcao" value="">
+    <input type="hidden" name="nmgp_ordem" value="">
+    <input type="hidden" name="nmgp_chave_det" value="">
+    <input type="hidden" name="nmgp_quant_linhas" value="">
+    <input type="hidden" name="nmgp_url_saida" value="">
+    <input type="hidden" name="nmgp_parms" value="">
+    <input type="hidden" name="nmgp_tipo_pdf" value="">
+    <input type="hidden" name="nmgp_outra_jan" value="">
+    <input type="hidden" name="script_case_init" value="188"> 
+    <input type="hidden" name="script_case_session" value="j9mkarfs8onn4chdjmi48l1np4"> 
+   </form> 
+   <form name="F4" method="post" action="./pagina_files/pagina.html" target="_self" style="display: none"> 
+    <input type="hidden" name="nmgp_opcao" value="rec">
+    <input type="hidden" name="rec" value="">
+    <input type="hidden" name="nm_call_php" value="">
+    <input type="hidden" name="script_case_init" value="188"> 
+    <input type="hidden" name="script_case_session" value="j9mkarfs8onn4chdjmi48l1np4"> 
+   </form> 
+   <form name="F5" method="post" action="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/consulta_geral/consulta_geral_pesq.class.php" target="_self" style="display: none"> 
+    <input type="hidden" name="script_case_init" value="188"> 
+    <input type="hidden" name="script_case_session" value="j9mkarfs8onn4chdjmi48l1np4"> 
+   </form> 
+   <form name="F6" method="post" action="./pagina_files/pagina.html" target="_self" style="display: none"> 
+    <input type="hidden" name="script_case_init" value="188"> 
+    <input type="hidden" name="script_case_session" value="j9mkarfs8onn4chdjmi48l1np4"> 
+   </form> 
+   <script type="text/javascript">
+   var obj_tr      = "";
+   var css_tr      = "";
+   var field_over  = 1;
+   var field_click = 1;
+   function over_tr(obj, class_obj)
+   {
+       if (field_over != 1)
+       {
+           return;
+       }
+       if (obj_tr == obj)
+       {
+           return;
+       }
+       obj.className = 'scGridFieldOver';
+   }
+   function out_tr(obj, class_obj)
+   {
+       if (field_over != 1)
+       {
+           return;
+       }
+       if (obj_tr == obj)
+       {
+           return;
+       }
+       obj.className = class_obj;
+   }
+   function click_tr(obj, class_obj)
+   {
+       if (field_click != 1)
+       {
+           return;
+       }
+       if (obj_tr != "")
+       {
+           obj_tr.className = css_tr;
+       }
+       css_tr        = class_obj;
+       if (obj_tr == obj)
+       {
+           obj_tr     = '';
+           return;
+       }
+       obj_tr        = obj;
+       css_tr        = class_obj;
+       obj.className = 'scGridFieldClick';
+   }
+   nm_gp_ini = "ini";
+   nm_gp_rec_ini = "0";
+   nm_gp_rec_fim = "2";
+   function nm_gp_submit_rec(campo) 
+   { 
+      if (nm_gp_ini == "ini" && (campo == "ini" || campo == nm_gp_rec_ini)) 
+      { 
+          return; 
+      } 
+      if (nm_gp_fim == "fim" && (campo == "fim" || campo == nm_gp_rec_fim)) 
+      { 
+          return; 
+      } 
+      document.F4.target = "_self"; 
+      document.F4.rec.value = campo ;
+      document.F4.nmgp_opcao.value = "rec" ;
+      document.F4.submit() ;
+   } 
+   function nm_gp_submit(campo) 
+   { 
+      document.F3.target = "_self"; 
+      document.F3.nmgp_parms.value = campo ;
+      document.F3.nmgp_opcao.value = "igual" ;
+      document.F3.nmgp_url_saida.value = "";
+      document.F3.action           = "consulta_geral.php"  ;
+      document.F3.submit() ;
+   } 
+   function nm_gp_submit2(campo) 
+   { 
+      document.F3.target           = "_self"; 
+      document.F3.nmgp_ordem.value = campo ;
+      document.F3.nmgp_opcao.value = "ordem" ;
+      document.F3.nmgp_url_saida.value = "";
+      document.F3.action           = "consulta_geral.php"  ;
+      document.F3.submit() ;
+   } 
+   function nm_gp_submit3(campo, opc) 
+   { 
+      document.F3.target               = "_self"; 
+      document.F3.nmgp_chave_det.value = campo ;
+      document.F3.nmgp_opcao.value     = opc ;
+      document.F3.nmgp_url_saida.value = "";
+      document.F3.action               = "consulta_geral.php"  ;
+      document.F3.submit() ;
+   } 
+   function nm_move(tipo) 
+   { 
+      document.F6.target = "_self"; 
+      document.F6.submit() ;
+      return;
+   } 
+   function nm_gp_move(x, y, z, p, g) 
+   { 
+       document.F3.action           = "consulta_geral.php"  ;
+       document.F3.nmgp_parms.value = "" ;
+       document.F3.nmgp_url_saida.value = "" ;
+       document.F3.nmgp_opcao.value = x; 
+       document.F3.nmgp_outra_jan.value = "" ;
+       document.F3.target = "_self"; 
+       if (y == 1) 
+       {
+           document.F3.target = "_blank"; 
+       }
+       if (z != null) 
+       { 
+           document.F3.nmgp_tipo_pdf.value = z; 
+       } 
+       if ("xls" == x)
+       {
+       }
+       if ("pdf" == x)
+       {
+           window.location = "/scriptcase/aplicacoes/portalobras/consulta_geral/consulta_geral_iframe.php?scsess=j9mkarfs8onn4chdjmi48l1np4&str_tmp=/scriptcase/prod_scriptcase5/tmp&str_prod=/scriptcase/prod_scriptcase5/prod&str_btn=Scriptcase5_Silver/Scriptcase5_Silver.css&str_lang=pt_br&str_schema=portal2012/portal2012&script_case_init=188&script_case_session=j9mkarfs8onn4chdjmi48l1np4&pbfile=D%3A%2FInetpub%2Fwwwroot%2Fscriptcase%2Fprod_scriptcase5%2Ftmp%2Fsc_pb_j9mkarfs8onn4chdjmi48l1np4.tmp&jspath=%2Fscriptcase%2Fprod_scriptcase5%2Fprod%2Flib%2Fjs&sc_apbgcol=D%3A%2FInetpub%2Fwwwroot%2Fscriptcase%2Faplicacoes%2Fportalobras%2F_lib%2Fcss%2F&sc_tp_pdf=" + z + "&sc_parms_pdf=" + p + "&sc_graf_pdf=" + g;
+       }
+       else
+       {
+           document.F3.submit();  
+       }
+   } 
+   nm_img = new Image();
+   function nm_mostra_img(imagem, altura, largura)
+   {
+       tb_show("", imagem, "");
+   }
+   function nm_mostra_doc(campo1, campo2, campo3, campo4)
+   {
+       while (campo2.lastIndexOf("&") != -1)
+       {
+          campo2 = campo2.replace("&" , "**Ecom**");
+       }
+       while (campo2.lastIndexOf("#") != -1)
+       {
+          campo2 = campo2.replace("#" , "**Jvel**");
+       }
+       NovaJanela = window.open (campo4 + "?script_case_init=188&script_case_session=j9mkarfs8onn4chdjmi48l1np4&nm_cod_doc=" + campo1 + "&nm_nome_doc=" + campo2 + "&nm_cod_apl=" + campo3, "ScriptCase", "resizable");
+   }
+   function nm_escreve_window()
+   {
+      document.F5.action = "consulta_geral_fim.php";
+      document.F5.submit();
+   }
+   function nm_open_popup(parms)
+   {
+       NovaJanela = window.open (parms, '', 'resizable, scrollbars');
+   }
+   </script>
+   <table id="main_table_grid" class="scGridBorder" align="center" valign="top" width="95%">
+ <tbody><tr>
+  <td class="scGridTabelaTd" style="vertical-align: top">
+<table width="100%" style="padding: 0px; border-spacing: 0px; border-width: 0px;" cellpadding="0" cellspacing="0">
+<tbody><tr align="center">
+ <td colspan="3">
+     <table style="padding: 0px; border-spacing: 0px; border-width: 0px;" width="100%" cellpadding="0" cellspacing="0">
+       <tbody><tr valign="middle">
+         <td align="left"><span class="scGridHeaderFont">    <img src="./pagina_files/grp__NM__logoPortalConsulta.png" border="0"> </span></td>
+         <td style="font-size: 5px">&nbsp; &nbsp; </td>
+         <td align="center"><span class="scGridHeaderFont">  </span></td>
+         <td style="font-size: 5px">&nbsp; &nbsp; </td>
+         <td align="right"><span class="scGridHeaderFont">    <img src="./pagina_files/grp__NM__logoTCEconsulta.png" border="0"> &nbsp;&nbsp;</span></td>
+         <td width="3px" class="scGridHeader"></td>
+       </tr>
+     </tbody></table>
+ </td>
+</tr>
+<tr align="center">
+  <td height="5px" class="scGridHeader"></td>
+  <td height="1px" class="scGridHeader"></td>
+  <td height="1px" class="scGridHeader"></td>
+</tr>
+</tbody></table>
+  </td>
+ </tr>
+      <tr>
+       <td class="scGridTabelaTd" valign="top"> 
+      <div id="div_F0_top" style="display: none"> 
+      <form name="F0_top" method="post" action="./pagina_files/pagina.html" target="_self"> 
+      <input type="hidden" name="script_case_init" value="188"> 
+      <input type="hidden" name="script_case_session" value="j9mkarfs8onn4chdjmi48l1np4">
+      <input type="hidden" name="nmgp_opcao" value="muda_qt_linhas"> 
+      </form></div> 
+        <table class="scGridToolbar" style="padding: 0px; border-spacing: 0px; border-width: 0px; vertical-align: top;" width="100%" valign="top">
+         <tbody><tr> 
+          <td class="scGridToolbarPadding" nowrap="" valign="middle" align="left" width="33%"> 
+         </td> 
+          <td class="scGridToolbarPadding" nowrap="" valign="middle" align="center" width="33%"> 
+           <input type="button" id="sai_top" onclick="nm_gp_move(&#39;busca&#39;, &#39;0&#39;); return false" class="scButton_default" value="Retornar" title="Retornar a pagina anterior" style="vertical-align: middle">
+ 
+         </td> 
+          <td class="scGridToolbarPadding" nowrap="" valign="middle" align="right" width="33%"> 
+         </td> 
+        </tr> 
+       </tbody></table> 
+      
+      </td> 
+     </tr> 
+ <tr> 
+  <td class="scGridTabelaTd" style="vertical-align: top" width="100%">
+   <table class="scGridTabela" align="center" id="apl_consulta_geral#?#1" width="100%">
+    <tbody><tr id="tit_consulta_geral#?#1" align="center" class="scGridLabel">
+     <td class="scGridLabelFont" style="text-align:left;vertical-align:middle;font-weight:bold;">Município</td>
+     <td class="scGridLabelFont" style="text-align:left;vertical-align:middle;font-weight:bold;">Nome do Órgão</td>
+     <td class="scGridLabelFont" style="text-align:left;vertical-align:middle;font-weight:bold;">Nome da Obra</td>
+     <td class="scGridLabelFont" style="text-align:left;vertical-align:middle;font-weight:bold;">Data Última Auditoria</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=774">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Departamento de Estradas de Rodagem do Estado de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Restauração e adequação de capacidade e duplicação da rodovia BR-408/PE, entr. BR-232 (Recife) - entr. PE-005(Bicopeba), Km 63,90 - Km 86,00.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">12/03/2015</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=861">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Serviços Técnicos Especializados de Engenharia para Execução de Obras de Urbanização do Cais do Porto do Recife.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">04/03/2015</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1126">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Contratação de Empresa de Engenharia para a Execução das Obras e Serviços, bem como Fornecimento e Instalação de Equipamentos para Construção do Cais do Sertão - Museu Luiz Gonzaga.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">04/03/2015</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1908">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Serviços Técnicos Especializados de Engenharia Consultiva para o Gerenciamento, Supervisão e Fiscalização das Obras de Urbanização do Cais do Porto do Recife Reforma e Adequação do Armazém 07 - Terminal Marítmo de Passageiros e da Construção do Cais do Sertão-Museu Luiz Gonzaga</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">04/03/2015</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1909">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Execução das Obras e Serviços de Melhoramento da Infraestrutura do Porto do Recife: Adequação do Sistema Elétrico e da Rede de Iluminação Externa, Reforma com Recuperação Estrutural dos Prédios das Subestações, Trecho das Fachadas dos Armazéns dos Cais 00, 1, 7, 8 e Parte do 9.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">04/03/2015</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1910">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Supervisão e Fiscalização das Obras de Melhoramentos da Infra Estrutura do Porto do Recife: Adequação do Sistema Elétrico e Rede de Iluminação Externa, Reforma com Recuperação Estrutural dos Prédios das Subestações, Trechos das Fachadas dos Armazéns do Cais 00, 1, 7, 8 e Parte 9</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">04/03/2015</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1982">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Arrendamento de Áreas Portuárias não Operacionais do Porto do Recife para Implantação de Complexo Integrado Comercial, Hoteleiro, de Convenções e Exposições</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">04/03/2015</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1986">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Manutenção e Limpeza Urbana - Emlurb</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Serviços de manutenção e recuperação da pavimentação de vias em paralelepípedo constituintes do sistema viário da cidade do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">11/02/2015</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=763">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Companhia Pernambucana de Saneamento</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação do Sistema de Esgotamento Sanitário do Recife - PROEST Área II</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">30/12/2014</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1986">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Manutenção e Limpeza Urbana - Emlurb</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Serviços de manutenção e recuperação da pavimentação de vias em paralelepípedo constituintes do sistema viário da cidade do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">10/12/2014</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1982">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Arrendamento de Áreas Portuárias não Operacionais do Porto do Recife para Implantação de Complexo Integrado Comercial, Hoteleiro, de Convenções e Exposições</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">29/10/2014</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1909">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Execução das Obras e Serviços de Melhoramento da Infraestrutura do Porto do Recife: Adequação do Sistema Elétrico e da Rede de Iluminação Externa, Reforma com Recuperação Estrutural dos Prédios das Subestações, Trecho das Fachadas dos Armazéns dos Cais 00, 1, 7, 8 e Parte do 9.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">29/10/2014</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1910">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Supervisão e Fiscalização das Obras de Melhoramentos da Infra Estrutura do Porto do Recife: Adequação do Sistema Elétrico e Rede de Iluminação Externa, Reforma com Recuperação Estrutural dos Prédios das Subestações, Trechos das Fachadas dos Armazéns do Cais 00, 1, 7, 8 e Parte 9</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">29/10/2014</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1908">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Serviços Técnicos Especializados de Engenharia Consultiva para o Gerenciamento, Supervisão e Fiscalização das Obras de Urbanização do Cais do Porto do Recife Reforma e Adequação do Armazém 07 - Terminal Marítmo de Passageiros e da Construção do Cais do Sertão-Museu Luiz Gonzaga</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">29/10/2014</td>
+</tr>
+    <tr class="scGridFieldOver" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=861">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Serviços Técnicos Especializados de Engenharia para Execução de Obras de Urbanização do Cais do Porto do Recife.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">29/10/2014</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1126">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Contratação de Empresa de Engenharia para a Execução das Obras e Serviços, bem como Fornecimento e Instalação de Equipamentos para Construção do Cais do Sertão - Museu Luiz Gonzaga.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">29/10/2014</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1129">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Serviços de supervisão, coordenação, fiscalização, controle tecnológico e gerenciamento ambiental das obras de implantação das 2ª e 3ª etapas da Via Mangue.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">17/10/2014</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=806">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação da 2ª e 3ª Etapa do Sistema Viário da Via Mangue nos bairros de Boa Viagem e do Pina, RPA - 06, M.R. 6.1, município do Recife.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">17/10/2014</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1946">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Prefeitura da Cidade do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Reforma do prédio da nova sede da Procuradoria da Fazenda Municipal</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">16/10/2014</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1953">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Manutenção e Limpeza Urbana - Emlurb</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Acompanhamento do Projeto Reluz - PCR</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">01/10/2014</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1949">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Serviços necessários à conclusão da Obra de Implantação do Terminal Integrado de Passageiro Cosme e Damião</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">15/09/2014</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1418">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação da Passarela de Integração do Aeroporto Internacional dos Guararapes ao sistema Metroviário da Linha Sul, localizado na Cidade do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">01/09/2014</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1126">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Contratação de Empresa de Engenharia para a Execução das Obras e Serviços, bem como Fornecimento e Instalação de Equipamentos para Construção do Cais do Sertão - Museu Luiz Gonzaga.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">19/08/2014</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=861">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Serviços Técnicos Especializados de Engenharia para Execução de Obras de Urbanização do Cais do Porto do Recife.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">19/08/2014</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1909">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Execução das Obras e Serviços de Melhoramento da Infraestrutura do Porto do Recife: Adequação do Sistema Elétrico e da Rede de Iluminação Externa, Reforma com Recuperação Estrutural dos Prédios das Subestações, Trecho das Fachadas dos Armazéns dos Cais 00, 1, 7, 8 e Parte do 9.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">19/08/2014</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1495">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Revestimento Canal Ibiporã</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">08/08/2014</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1259">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Execução de 11 canais em diversos bairros do Capibaribe.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">08/08/2014</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1494">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Construção do Canal do Guarulhos</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">07/08/2014</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1492">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Complementação do Revestimento do Canal do Iraque</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">07/08/2014</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1496">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Revestimento do Canal Rio da Prata</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">07/08/2014</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=887">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Execução das obras de ampliação do Parque Santana, reabilitação do Parque Caiara e construção do Parque Apipucos, na cidade do Recife.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">06/08/2014</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1124">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação do corredor de transporte público de passageiros Leste-oeste</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">30/06/2014</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1911">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Contratação de empresa para execução de serviços necessários à reabilitação do pavimento e obras de melhoramentos, adequação da capacidade e segurança rodoviária e implantação do sistema de transporte rápido de ônibus tro/brt na br 101 segmento km 51,60 ao km 82,30.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">30/06/2014</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1910">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Supervisão e Fiscalização das Obras de Melhoramentos da Infra Estrutura do Porto do Recife: Adequação do Sistema Elétrico e Rede de Iluminação Externa, Reforma com Recuperação Estrutural dos Prédios das Subestações, Trechos das Fachadas dos Armazéns do Cais 00, 1, 7, 8 e Parte 9</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">10/06/2014</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1909">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Execução das Obras e Serviços de Melhoramento da Infraestrutura do Porto do Recife: Adequação do Sistema Elétrico e da Rede de Iluminação Externa, Reforma com Recuperação Estrutural dos Prédios das Subestações, Trecho das Fachadas dos Armazéns dos Cais 00, 1, 7, 8 e Parte do 9.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">10/06/2014</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1908">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Serviços Técnicos Especializados de Engenharia Consultiva para o Gerenciamento, Supervisão e Fiscalização das Obras de Urbanização do Cais do Porto do Recife Reforma e Adequação do Armazém 07 - Terminal Marítmo de Passageiros e da Construção do Cais do Sertão-Museu Luiz Gonzaga</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">10/06/2014</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=861">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Serviços Técnicos Especializados de Engenharia para Execução de Obras de Urbanização do Cais do Porto do Recife.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">10/06/2014</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1127">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação do Corredor de Transporte Público de Passageiros Norte-Sul localizado da Região Metropolitana do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">20/05/2014</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1455">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Companhia Pernambucana de Saneamento</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação do Sistema de Esgotamento Sanitário do Recife - PROEST Área I</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">07/05/2014</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1492">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Complementação do Revestimento do Canal do Iraque</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">24/02/2014</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1492">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Complementação do Revestimento do Canal do Iraque</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">24/02/2014</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1495">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Revestimento Canal Ibiporã</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">19/02/2014</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1495">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Revestimento Canal Ibiporã</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">19/02/2014</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1259">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Execução de 11 canais em diversos bairros do Capibaribe.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">19/02/2014</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1259">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Execução de 11 canais em diversos bairros do Capibaribe.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">19/02/2014</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=887">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Execução das obras de ampliação do Parque Santana, reabilitação do Parque Caiara e construção do Parque Apipucos, na cidade do Recife.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">19/02/2014</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=887">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Execução das obras de ampliação do Parque Santana, reabilitação do Parque Caiara e construção do Parque Apipucos, na cidade do Recife.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">19/02/2014</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=861">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Serviços Técnicos Especializados de Engenharia para Execução de Obras de Urbanização do Cais do Porto do Recife.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">18/02/2014</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1418">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação da Passarela de Integração do Aeroporto Internacional dos Guararapes ao sistema Metroviário da Linha Sul, localizado na Cidade do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">17/02/2014</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1127">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação do Corredor de Transporte Público de Passageiros Norte-Sul localizado da Região Metropolitana do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">17/02/2014</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1496">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Revestimento do Canal Rio da Prata</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">30/01/2014</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1496">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Revestimento do Canal Rio da Prata</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">30/01/2014</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1494">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Construção do Canal do Guarulhos</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">30/01/2014</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1494">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Construção do Canal do Guarulhos</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">30/01/2014</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=304">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Departamento de Estradas de Rodagem do Estado de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Restauração e Adequação de Capacidade e Duplicação da Rodovia BR-408/PE, Trecho: Div. PB/PE (Juparintinga/Biranga)- entr. BR-232, Subtrecho:Entr. PE-005 (Bicopeba) - Entr. BR-232, Segmento: KM 86,10 - KM 105,80.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">11/12/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1530">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Serviços de dragagem de manutenção e recomposição da calha natural de trechos do Rio Capibaribe e da foz do Rio Beberibe para implantação de hidrovia</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">10/12/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1455">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Companhia Pernambucana de Saneamento</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação do Sistema de Esgotamento Sanitário do Recife - PROEST Área I</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">06/12/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=763">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Companhia Pernambucana de Saneamento</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação do Sistema de Esgotamento Sanitário do Recife - PROEST Área II</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">05/12/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1418">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação da Passarela de Integração do Aeroporto Internacional dos Guararapes ao sistema Metroviário da Linha Sul, localizado na Cidade do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">29/11/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1127">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação do Corredor de Transporte Público de Passageiros Norte-Sul localizado da Região Metropolitana do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">29/11/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1126">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Contratação de Empresa de Engenharia para a Execução das Obras e Serviços, bem como Fornecimento e Instalação de Equipamentos para Construção do Cais do Sertão - Museu Luiz Gonzaga.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">20/11/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1126">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Contratação de Empresa de Engenharia para a Execução das Obras e Serviços, bem como Fornecimento e Instalação de Equipamentos para Construção do Cais do Sertão - Museu Luiz Gonzaga.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">20/11/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=861">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Serviços Técnicos Especializados de Engenharia para Execução de Obras de Urbanização do Cais do Porto do Recife.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">20/11/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1085">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Contratação de empresa de engenharia para recuperação e adequação do armazem 07 do Porto do Recife para instalação do Terminal Marítimo de Passageiro, segunda etapa.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">20/11/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1085">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Contratação de empresa de engenharia para recuperação e adequação do armazem 07 do Porto do Recife para instalação do Terminal Marítimo de Passageiro, segunda etapa.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">20/11/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1535">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Companhia Pernambucana de Saneamento</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">&nbsp;</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">20/11/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1552">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Contratação de empresa de Engenharia Especializada para Execução das Obras e Serviços de Reforma, Adequação e Melhoramentos da Infraestrutura Operacional dos Cais 07, 08 e 09/10 do Porto do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">20/11/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1124">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação do corredor de transporte público de passageiros Leste-oeste</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">14/11/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1318">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Companhia Estadual de Habitação e Obras</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Conjunto Habitacional Escorregou Tá Dentro - 2ª Etapa</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">14/11/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1223">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Companhia Estadual de Habitação e Obras</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Conjunto Habitacional Mulheres de Tejucupapo</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">14/11/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1603">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria de Educação e Esportes</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Construção da Escola Técnica Estadual do Jordão com Quadra Coberta, localizada no município de Recife/PE</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">06/11/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1418">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação da Passarela de Integração do Aeroporto Internacional dos Guararapes ao sistema Metroviário da Linha Sul, localizado na Cidade do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">30/09/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=774">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Departamento de Estradas de Rodagem do Estado de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Restauração e adequação de capacidade e duplicação da rodovia BR-408/PE, entr. BR-232 (Recife) - entr. PE-005(Bicopeba), Km 63,90 - Km 86,00.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">24/09/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1127">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação do Corredor de Transporte Público de Passageiros Norte-Sul localizado da Região Metropolitana do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">18/09/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1500">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria de Educação e Esportes</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Construção de quadra coberta na Escola Padre Donino, localizada no município de Recife/PE</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">13/09/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1129">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Serviços de supervisão, coordenação, fiscalização, controle tecnológico e gerenciamento ambiental das obras de implantação das 2ª e 3ª etapas da Via Mangue.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">12/09/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=806">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação da 2ª e 3ª Etapa do Sistema Viário da Via Mangue nos bairros de Boa Viagem e do Pina, RPA - 06, M.R. 6.1, município do Recife.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">12/09/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1121">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação do Terminal Integrado Cosme e Damião</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">31/08/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1418">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação da Passarela de Integração do Aeroporto Internacional dos Guararapes ao sistema Metroviário da Linha Sul, localizado na Cidade do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">30/08/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1127">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação do Corredor de Transporte Público de Passageiros Norte-Sul localizado da Região Metropolitana do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">30/08/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1124">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação do corredor de transporte público de passageiros Leste-oeste</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">30/08/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1539">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Construção do Conjunto Habitacional Casarão do Barbalho</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">22/08/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1538">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Prefeitura da Cidade do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Construção do Hospital da Mulher no Município do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">20/08/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1496">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Revestimento do Canal Rio da Prata</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">20/08/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=887">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Execução das obras de ampliação do Parque Santana, reabilitação do Parque Caiara e construção do Parque Apipucos, na cidade do Recife.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">19/08/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1085">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Contratação de empresa de engenharia para recuperação e adequação do armazem 07 do Porto do Recife para instalação do Terminal Marítimo de Passageiro, segunda etapa.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">13/08/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=861">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Serviços Técnicos Especializados de Engenharia para Execução de Obras de Urbanização do Cais do Porto do Recife.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">13/08/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1126">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Contratação de Empresa de Engenharia para a Execução das Obras e Serviços, bem como Fornecimento e Instalação de Equipamentos para Construção do Cais do Sertão - Museu Luiz Gonzaga.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">13/08/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1552">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Contratação de empresa de Engenharia Especializada para Execução das Obras e Serviços de Reforma, Adequação e Melhoramentos da Infraestrutura Operacional dos Cais 07, 08 e 09/10 do Porto do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">13/08/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1530">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Serviços de dragagem de manutenção e recomposição da calha natural de trechos do Rio Capibaribe e da foz do Rio Beberibe para implantação de hidrovia</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">30/06/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1124">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação do corredor de transporte público de passageiros Leste-oeste</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">30/06/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1127">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação do Corredor de Transporte Público de Passageiros Norte-Sul localizado da Região Metropolitana do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">30/06/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1121">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação do Terminal Integrado Cosme e Damião</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">30/06/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1418">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação da Passarela de Integração do Aeroporto Internacional dos Guararapes ao sistema Metroviário da Linha Sul, localizado na Cidade do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">28/06/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1500">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria de Educação e Esportes</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Construção de quadra coberta na Escola Padre Donino, localizada no município de Recife/PE</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">28/06/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1129">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Serviços de supervisão, coordenação, fiscalização, controle tecnológico e gerenciamento ambiental das obras de implantação das 2ª e 3ª etapas da Via Mangue.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">13/06/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=806">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação da 2ª e 3ª Etapa do Sistema Viário da Via Mangue nos bairros de Boa Viagem e do Pina, RPA - 06, M.R. 6.1, município do Recife.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">13/06/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=863">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Reforma e Adequação do Armazém 11 do Porto do Recife para Instalação do Centro de Artesanato de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">10/06/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1085">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Contratação de empresa de engenharia para recuperação e adequação do armazem 07 do Porto do Recife para instalação do Terminal Marítimo de Passageiro, segunda etapa.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">10/06/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1126">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Contratação de Empresa de Engenharia para a Execução das Obras e Serviços, bem como Fornecimento e Instalação de Equipamentos para Construção do Cais do Sertão - Museu Luiz Gonzaga.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">10/06/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1223">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Companhia Estadual de Habitação e Obras</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Conjunto Habitacional Mulheres de Tejucupapo</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">07/06/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1318">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Companhia Estadual de Habitação e Obras</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Conjunto Habitacional Escorregou Tá Dentro - 2ª Etapa</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">07/06/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=304">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Departamento de Estradas de Rodagem do Estado de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Restauração e Adequação de Capacidade e Duplicação da Rodovia BR-408/PE, Trecho: Div. PB/PE (Juparintinga/Biranga)- entr. BR-232, Subtrecho:Entr. PE-005 (Bicopeba) - Entr. BR-232, Segmento: KM 86,10 - KM 105,80.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">07/06/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1494">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Construção do Canal do Guarulhos</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">03/06/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1492">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Complementação do Revestimento do Canal do Iraque</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">03/06/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1493">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Construção Conjunto Habitacional Casarão do Barbalho</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">03/06/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1495">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Revestimento Canal Ibiporã</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">29/05/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1496">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Revestimento do Canal Rio da Prata</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">29/05/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1259">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Execução de 11 canais em diversos bairros do Capibaribe.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">28/05/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1418">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação da Passarela de Integração do Aeroporto Internacional dos Guararapes ao sistema Metroviário da Linha Sul, localizado na Cidade do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">15/05/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1127">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação do Corredor de Transporte Público de Passageiros Norte-Sul localizado da Região Metropolitana do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">15/05/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=887">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Execução das obras de ampliação do Parque Santana, reabilitação do Parque Caiara e construção do Parque Apipucos, na cidade do Recife.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">04/04/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1121">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação do Terminal Integrado Cosme e Damião</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">31/03/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1124">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação do corredor de transporte público de passageiros Leste-oeste</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">31/03/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1127">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação do Corredor de Transporte Público de Passageiros Norte-Sul localizado da Região Metropolitana do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">29/03/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1418">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação da Passarela de Integração do Aeroporto Internacional dos Guararapes ao sistema Metroviário da Linha Sul, localizado na Cidade do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">26/03/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1126">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Contratação de Empresa de Engenharia para a Execução das Obras e Serviços, bem como Fornecimento e Instalação de Equipamentos para Construção do Cais do Sertão - Museu Luiz Gonzaga.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">19/03/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1084">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Contratação de Empresa de Engenharia Civil para Execução das Reformas e Restaurações dos Armazéns 05 e 06 do Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">19/03/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1085">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Contratação de empresa de engenharia para recuperação e adequação do armazem 07 do Porto do Recife para instalação do Terminal Marítimo de Passageiro, segunda etapa.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">19/03/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=861">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Serviços Técnicos Especializados de Engenharia para Execução de Obras de Urbanização do Cais do Porto do Recife.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">19/03/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=863">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Reforma e Adequação do Armazém 11 do Porto do Recife para Instalação do Centro de Artesanato de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">19/03/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=861">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Serviços Técnicos Especializados de Engenharia para Execução de Obras de Urbanização do Cais do Porto do Recife.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">19/03/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1223">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Companhia Estadual de Habitação e Obras</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Conjunto Habitacional Mulheres de Tejucupapo</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">08/03/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1318">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Companhia Estadual de Habitação e Obras</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Conjunto Habitacional Escorregou Tá Dentro - 2ª Etapa</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">08/03/2013</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1455">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Companhia Pernambucana de Saneamento</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação do Sistema de Esgotamento Sanitário do Recife - PROEST Área I</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">25/02/2013</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1418">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação da Passarela de Integração do Aeroporto Internacional dos Guararapes ao sistema Metroviário da Linha Sul, localizado na Cidade do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">31/12/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1124">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação do corredor de transporte público de passageiros Leste-oeste</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">31/12/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1127">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação do Corredor de Transporte Público de Passageiros Norte-Sul localizado da Região Metropolitana do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">31/12/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1121">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação do Terminal Integrado Cosme e Damião</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">31/12/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1121">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação do Terminal Integrado Cosme e Damião</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">28/12/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1124">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação do corredor de transporte público de passageiros Leste-oeste</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">28/12/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=763">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Companhia Pernambucana de Saneamento</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação do Sistema de Esgotamento Sanitário do Recife - PROEST Área II</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">20/12/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=806">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação da 2ª e 3ª Etapa do Sistema Viário da Via Mangue nos bairros de Boa Viagem e do Pina, RPA - 06, M.R. 6.1, município do Recife.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">14/12/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1127">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação do Corredor de Transporte Público de Passageiros Norte-Sul localizado da Região Metropolitana do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">14/12/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1129">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Serviços de supervisão, coordenação, fiscalização, controle tecnológico e gerenciamento ambiental das obras de implantação das 2ª e 3ª etapas da Via Mangue.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">14/12/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1126">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Contratação de Empresa de Engenharia para a Execução das Obras e Serviços, bem como Fornecimento e Instalação de Equipamentos para Construção do Cais do Sertão - Museu Luiz Gonzaga.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">21/11/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=861">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Serviços Técnicos Especializados de Engenharia para Execução de Obras de Urbanização do Cais do Porto do Recife.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">21/11/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=862">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Reforma e Adequação do Armazém 11 do Porto do Recife para Instalação do Centro de Artesanato de Pernambuco.
+Valores envolvidos no Período de Liquidação: de Agosto a Outubro de 2012.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">21/11/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1085">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Contratação de empresa de engenharia para recuperação e adequação do armazem 07 do Porto do Recife para instalação do Terminal Marítimo de Passageiro, segunda etapa.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">21/11/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1084">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Contratação de Empresa de Engenharia Civil para Execução das Reformas e Restaurações dos Armazéns 05 e 06 do Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">21/11/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=865">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Adequação do Prédio Administrativo da Sede do Porto do Recife.
+Valores envolvidos no Período de Liquidação: de Agosto a Outubro de 2012.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">21/11/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1127">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação do Corredor de Transporte Público de Passageiros Norte-Sul localizado da Região Metropolitana do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">15/11/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1121">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação do Terminal Integrado Cosme e Damião</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">07/11/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1223">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Companhia Estadual de Habitação e Obras</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Conjunto Habitacional Mulheres de Tejucupapo</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">01/11/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1223">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Companhia Estadual de Habitação e Obras</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Conjunto Habitacional Mulheres de Tejucupapo</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">31/10/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1124">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação do corredor de transporte público de passageiros Leste-oeste</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">15/10/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1121">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação do Terminal Integrado Cosme e Damião</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">30/09/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1127">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação do Corredor de Transporte Público de Passageiros Norte-Sul localizado da Região Metropolitana do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">28/09/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1223">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Companhia Estadual de Habitação e Obras</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Conjunto Habitacional Mulheres de Tejucupapo</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">14/09/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1318">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Companhia Estadual de Habitação e Obras</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Conjunto Habitacional Escorregou Tá Dentro - 2ª Etapa</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">14/09/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1259">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Execução de 11 canais em diversos bairros do Capibaribe.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">31/08/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=887">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Execução das obras de ampliação do Parque Santana, reabilitação do Parque Caiara e construção do Parque Apipucos, na cidade do Recife.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">22/08/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1121">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação do Terminal Integrado Cosme e Damião</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">15/08/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1127">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação do Corredor de Transporte Público de Passageiros Norte-Sul localizado da Região Metropolitana do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">15/08/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1126">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Contratação de Empresa de Engenharia para a Execução das Obras e Serviços, bem como Fornecimento e Instalação de Equipamentos para Construção do Cais do Sertão - Museu Luiz Gonzaga.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">09/08/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1085">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Contratação de empresa de engenharia para recuperação e adequação do armazem 07 do Porto do Recife para instalação do Terminal Marítimo de Passageiro, segunda etapa.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">09/08/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=865">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Adequação do Prédio Administrativo da Sede do Porto do Recife.
+Valores envolvidos no Período de Liquidação: de Agosto a Outubro de 2012.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">09/08/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=862">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Reforma e Adequação do Armazém 11 do Porto do Recife para Instalação do Centro de Artesanato de Pernambuco.
+Valores envolvidos no Período de Liquidação: de Agosto a Outubro de 2012.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">09/08/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=861">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Serviços Técnicos Especializados de Engenharia para Execução de Obras de Urbanização do Cais do Porto do Recife.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">09/08/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1124">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação do corredor de transporte público de passageiros Leste-oeste</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">30/07/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1127">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação do Corredor de Transporte Público de Passageiros Norte-Sul localizado da Região Metropolitana do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">29/06/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1223">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Companhia Estadual de Habitação e Obras</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Conjunto Habitacional Mulheres de Tejucupapo</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">15/06/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1274">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Requalificação da Comunidade do Pilar - lote 2</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">13/06/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=576">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Requalificação da Comunidade do Pilar - Lote 1</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">13/06/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1259">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Execução de 11 canais em diversos bairros do Capibaribe.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">11/06/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1260">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Pavimentação, drenagem, contenção e iluminação da Rua Samuel Lins, Casa Forte.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">05/06/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1258">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Revestimento de canal, pontilhão e proteção para pedestre do Canal do Iraque.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">05/06/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1127">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação do Corredor de Transporte Público de Passageiros Norte-Sul localizado da Região Metropolitana do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">15/05/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1124">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação do corredor de transporte público de passageiros Leste-oeste</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">15/05/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=887">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Execução das obras de ampliação do Parque Santana, reabilitação do Parque Caiara e construção do Parque Apipucos, na cidade do Recife.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">09/05/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1121">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação do Terminal Integrado Cosme e Damião</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">04/05/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=551">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria de Educação e Esportes</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Construção da Escola Dário Gomes com quadra coberta, localizada no município de Flores/PE</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">20/04/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=861">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Serviços Técnicos Especializados de Engenharia para Execução de Obras de Urbanização do Cais do Porto do Recife.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">12/04/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=865">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Adequação do Prédio Administrativo da Sede do Porto do Recife.
+Valores envolvidos no Período de Liquidação: de Agosto a Outubro de 2012.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">12/04/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=862">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Reforma e Adequação do Armazém 11 do Porto do Recife para Instalação do Centro de Artesanato de Pernambuco.
+Valores envolvidos no Período de Liquidação: de Agosto a Outubro de 2012.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">12/04/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1084">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Contratação de Empresa de Engenharia Civil para Execução das Reformas e Restaurações dos Armazéns 05 e 06 do Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">12/04/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1085">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Contratação de empresa de engenharia para recuperação e adequação do armazem 07 do Porto do Recife para instalação do Terminal Marítimo de Passageiro, segunda etapa.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">12/04/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1126">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Contratação de Empresa de Engenharia para a Execução das Obras e Serviços, bem como Fornecimento e Instalação de Equipamentos para Construção do Cais do Sertão - Museu Luiz Gonzaga.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">12/04/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1124">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação do corredor de transporte público de passageiros Leste-oeste</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">30/03/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1121">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Implantação do Terminal Integrado Cosme e Damião</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">26/03/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1127">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Secretaria das Cidades de Pernambuco</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação do Corredor de Transporte Público de Passageiros Norte-Sul localizado da Região Metropolitana do Recife-PE</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">20/03/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1129">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Serviços de supervisão, coordenação, fiscalização, controle tecnológico e gerenciamento ambiental das obras de implantação das 2ª e 3ª etapas da Via Mangue.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">29/02/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=806">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Empresa de Urbanização do Recife</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Implantação da 2ª e 3ª Etapa do Sistema Viário da Via Mangue nos bairros de Boa Viagem e do Pina, RPA - 06, M.R. 6.1, município do Recife.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">29/02/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=861">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Serviços Técnicos Especializados de Engenharia para Execução de Obras de Urbanização do Cais do Porto do Recife.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">12/01/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=862">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Reforma e Adequação do Armazém 11 do Porto do Recife para Instalação do Centro de Artesanato de Pernambuco.
+Valores envolvidos no Período de Liquidação: de Agosto a Outubro de 2012.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">12/01/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1085">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Contratação de empresa de engenharia para recuperação e adequação do armazem 07 do Porto do Recife para instalação do Terminal Marítimo de Passageiro, segunda etapa.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">12/01/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1084">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Contratação de Empresa de Engenharia Civil para Execução das Reformas e Restaurações dos Armazéns 05 e 06 do Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">12/01/2012</td>
+</tr>
+    <tr class="scGridFieldEven" onmouseover="over_tr(this, &#39;scGridFieldEven&#39;);" onmouseout="out_tr(this, &#39;scGridFieldEven&#39;);" onclick="click_tr(this, &#39;scGridFieldEven&#39;);">
+     <td rowspan="1" class="scGridFieldEvenFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=865">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">Adequação do Prédio Administrativo da Sede do Porto do Recife.
+Valores envolvidos no Período de Liquidação: de Agosto a Outubro de 2012.</td>
+     <td rowspan="1" class="scGridFieldEvenFont" align="left" valign="top" height="0px">12/01/2012</td>
+</tr>
+    <tr class="scGridFieldOdd" onmouseover="over_tr(this, &#39;scGridFieldOdd&#39;);" onmouseout="out_tr(this, &#39;scGridFieldOdd&#39;);" onclick="click_tr(this, &#39;scGridFieldOdd&#39;);">
+     <td rowspan="1" class="scGridFieldOddFont" style="font-weight:bold;" align="left" valign="top" height="0px"><a href="http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1126">Recife                         </a></td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Porto do Recife S.A.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">Contratação de Empresa de Engenharia para a Execução das Obras e Serviços, bem como Fornecimento e Instalação de Equipamentos para Construção do Cais do Sertão - Museu Luiz Gonzaga.</td>
+     <td rowspan="1" class="scGridFieldOddFont" align="left" valign="top" height="0px">12/01/2012</td>
+</tr>
+</tbody></table></td></tr>   </tbody></table>
+   
+   <script type="text/javascript">
+   function NM_liga_tbody(tbody, Obj, Apl)
+   {
+      Nivel = parseInt (Obj[tbody].substr(3));
+      for (ind = tbody + 1; ind < Obj.length; ind++)
+      {
+           Nv = parseInt (Obj[ind].substr(3));
+           Tp = Obj[ind].substr(0, 3);
+           if (Nivel == Nv && Tp == 'top')
+           {
+               break;
+           }
+           if (((Nivel + 1) == Nv && Tp == 'top') || (Nivel == Nv && Tp == 'bot'))
+           {
+               document.getElementById('tbody_' + Apl + '_' + ind + '_' + Tp).style.display='';
+           } 
+      }
+   }
+   function NM_apaga_tbody(tbody, Obj, Apl)
+   {
+      Nivel = Obj[tbody].substr(3);
+      for (ind = tbody + 1; ind < Obj.length; ind++)
+      {
+           Nv = Obj[ind].substr(3);
+           Tp = Obj[ind].substr(0, 3);
+           if ((Nivel == Nv && Tp == 'top') || Nv < Nivel)
+           {
+               break;
+           }
+           if ((Nivel != Nv) || (Nivel == Nv && Tp == 'bot'))
+           {
+               document.getElementById('tbody_' + Apl + '_' + ind + '_' + Tp).style.display='none';
+               if (Tp == 'top')
+               {
+                   document.getElementById('b_open_' + Apl + '_' + ind).style.display='';
+                   document.getElementById('b_close_' + Apl + '_' + ind).style.display='none';
+               } 
+           } 
+      }
+   }
+   NM_obj_ant = '';
+   function NM_apaga_div_lig(obj_nome)
+   {
+      if (NM_obj_ant != '')
+      {
+          NM_obj_ant.style.display='none';
+      }
+      obj = document.getElementById(obj_nome);
+      NM_obj_ant = obj;
+      ind_time = setTimeout("obj.style.display='none'", 300);
+      return ind_time;
+   }
+   </script>
+   
+</body></html>

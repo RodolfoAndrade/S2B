@@ -1,0 +1,120 @@
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=774
+BR-408
+@-7.6419569,-35.2546278,17z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=861
+Cais do Porto do Recife
+@-8.064156,-34.872359,17z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1126
+Cais do Sertão - Museu Luiz Gonzaga
+@-8.059708,-34.869975,17z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1908
+Cais do Sertão - Museu Luiz Gonzaga
+@-8.059708,-34.869975,17z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1909
+Cais do Porto do Recife
+@-8.064156,-34.872359,17z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1910
+Cais do Porto do Recife
+@-8.064156,-34.872359,17z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1982
+Cais do Porto do Recife
+@-8.064156,-34.872359,17z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1986
+?
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=763
+PROEST Área II
+@-8.023902,-34.95712,17z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1129
+Via Mangue
+@-8.0782536,-34.8920536,13z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=806
+Via Mangue
+@-8.0782536,-34.8920536,13z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1946
+?
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1953
+?
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1949
+?
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1418
+Aeroporto Internacional dos Guararapes 
+@-8.1258934,-34.9249737,14z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1495
+?
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1259
+Capibaribe
+@-8.0010662,-35.0224532,14z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1494
+?
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1492
+?
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1496
+?
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=887
+Parque Caiara
+@-8.0384826,-34.9276239,17z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1124
+?
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1911
+BR-101
+@-19.7504953,-40.3798166,17z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1127
+?
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1455
+PROEST Área I
+@-8.023902,-34.95712,17z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=304
+BR-408
+@-7.6419569,-35.2546278,17z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1530
+?
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1085
+Cais do Porto do Recife
+@-8.064156,-34.872359,17z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1535
+?
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1552
+Cais do Porto do Recife
+@-8.064156,-34.872359,17z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1318
+Av. Maurício de Nassau - Cordeiro, PE, Brasil
+@-8.0386168,-34.9306209,17z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1223
+?
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1603
+?
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1500
+Escola Padre Donino
+@-8.035143,-34.919194,17z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1121
+?
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1539
+?
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1538
+Hospital da Mulher
+@-23.635083,-46.499567,17z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=863
+Centro de Artesanato de Pernambuco
+@-8.0659608,-34.8730175,17z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1493
+?
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1084
+Cais do Porto do Recife
+@-8.064156,-34.872359,17z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=862
+Centro de Artesanato de Pernambuco
+@-8.0659608,-34.8730175,17z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=865
+?
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1274
+?
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=576
+?
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1260
+Rua Samuel Lins
+@-8.0330498,-34.9164803,17z
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=1258
+?
+http://www.tce.pe.gov.br/scriptcase/aplicacoes/portalobras/index/index.php?glo_codigoObra=551
+Escola Dário Gomes
+@-7.858832,-37.971853,17z

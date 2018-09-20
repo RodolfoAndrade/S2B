@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>SENAI</Machine>
+    <WindowsUser>Aluno</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>e1174681-9f73-40e1-a22f-705e47d24c03</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>EF0D21759A2BACEF01DA23064FFAD01F5F25E44D6B885313A228F2B04C011B57</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>e1174681-9f73-40e1-a22f-705e47d24c03_1.0.0.0_neutral__e3700t8fwz802</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>e1174681-9f73-40e1-a22f-705e47d24c03_e3700t8fwz802!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>e1174681-9f73-40e1-a22f-705e47d24c03</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Aluno</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-06-10T00:29:54.603</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\bin\Debug\ObrasRecife.Windows.exe">
+      <PackagePath>ObrasRecife.Windows.exe</PackagePath>
+      <Modified>2015-06-10T00:29:54.313</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T13:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T13:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T13:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T13:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Shared\pagina.html">
+      <PackagePath>pagina.html</PackagePath>
+      <Modified>2015-06-05T22:25:12.223</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2015-06-08T23:50:15.463</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2015-06-10T00:24:41.007</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\bin\Debug\Page1.xbf">
+      <PackagePath>Page1.xbf</PackagePath>
+      <Modified>2015-06-09T00:55:28.628</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\bin\Debug\Page2.xbf">
+      <PackagePath>Page2.xbf</PackagePath>
+      <Modified>2015-06-09T23:00:56.719</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\bin\Debug\Page3.xbf">
+      <PackagePath>Page3.xbf</PackagePath>
+      <Modified>2015-06-09T23:10:11.662</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\bin\Debug\Page4.xbf">
+      <PackagePath>Page4.xbf</PackagePath>
+      <Modified>2015-06-10T00:24:41.007</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\bin\Debug\Page5.xbf">
+      <PackagePath>Page5.xbf</PackagePath>
+      <Modified>2015-06-10T00:24:41.007</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\bin\Debug\ObrasRecife.Windows.xr.xml">
+      <PackagePath>ObrasRecife.Windows.xr.xml</PackagePath>
+      <Modified>2015-06-10T00:24:40.982</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Aluno\documents\visual studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-06-10T00:29:54.448</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

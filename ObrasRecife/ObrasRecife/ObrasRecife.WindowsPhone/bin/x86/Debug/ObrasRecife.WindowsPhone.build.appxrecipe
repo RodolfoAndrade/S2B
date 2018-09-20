@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>GUILHERME</Machine>
+    <WindowsUser>Rodolfo</WindowsUser>
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|x86</SolutionConfiguration>
+    <PackageArchitecture>x86</PackageArchitecture>
+    <PackageIdentityName>41b65164-3e23-43d8-b39f-51cc81743ed9</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Rodolfo\Documents\Visual Studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.WindowsPhone\obj\x86\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Rodolfo\Documents\Visual Studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.WindowsPhone\bin\x86\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Rodolfo\Documents\Visual Studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.WindowsPhone\bin\x86\Debug\ObrasRecife.WindowsPhone.exe">
+      <PackagePath>ObrasRecife.WindowsPhone.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Rodolfo\Documents\Visual Studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.WindowsPhone\Assets\Logo.scale-240.png">
+      <PackagePath>Assets\Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Rodolfo\Documents\Visual Studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.WindowsPhone\Assets\SmallLogo.scale-240.png">
+      <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Rodolfo\Documents\Visual Studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.WindowsPhone\Assets\SplashScreen.scale-240.png">
+      <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Rodolfo\Documents\Visual Studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.WindowsPhone\Assets\Square71x71Logo.scale-240.png">
+      <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Rodolfo\Documents\Visual Studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.WindowsPhone\Assets\StoreLogo.scale-240.png">
+      <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Rodolfo\Documents\Visual Studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.WindowsPhone\Assets\WideLogo.scale-240.png">
+      <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Rodolfo\Documents\Visual Studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Shared\obrasrecifelogo.png">
+      <PackagePath>obrasrecifelogo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Rodolfo\Documents\Visual Studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Shared\obrasrecifemap.txt">
+      <PackagePath>obrasrecifemap.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Rodolfo\Documents\Visual Studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.Shared\pagina.html">
+      <PackagePath>pagina.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Rodolfo\Documents\Visual Studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.WindowsPhone\bin\x86\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Rodolfo\Documents\Visual Studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.WindowsPhone\bin\x86\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Rodolfo\Documents\Visual Studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.WindowsPhone\bin\x86\Debug\Page1.xbf">
+      <PackagePath>Page1.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Rodolfo\Documents\Visual Studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.WindowsPhone\bin\x86\Debug\Page2.xbf">
+      <PackagePath>Page2.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Rodolfo\Documents\Visual Studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.WindowsPhone\bin\x86\Debug\Page3.xbf">
+      <PackagePath>Page3.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Rodolfo\Documents\Visual Studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.WindowsPhone\bin\x86\Debug\Page4.xbf">
+      <PackagePath>Page4.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Rodolfo\Documents\Visual Studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.WindowsPhone\bin\x86\Debug\Page5.xbf">
+      <PackagePath>Page5.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Rodolfo\Documents\Visual Studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.WindowsPhone\bin\x86\Debug\ObrasRecife.WindowsPhone.xr.xml">
+      <PackagePath>ObrasRecife.WindowsPhone.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Rodolfo\Documents\Visual Studio 2013\Projects\ObrasRecife\ObrasRecife\ObrasRecife.WindowsPhone\bin\x86\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

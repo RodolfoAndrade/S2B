@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="ObrasRecife.Page4"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ObrasRecife"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Image Source="http://www4.tce.pe.gov.br/internet/images/logo_2015_2.png" MaxWidth="400"/>
+            <Image Source="http://cidadao.tce.pe.gov.br/portalcidadao/templates/cidadao2012/images/logoPortal.png" MaxWidth="300"/>
+        </StackPanel>
+        <Grid Grid.Row="1" VerticalAlignment="Center" Margin="0,-200,0,0">
+        <StackPanel MaxWidth="200">
+            <TextBlock Text="Pesquisar" FontSize="20" TextAlignment="Center"/>
+            <TextBlock Text="Órgão:" FontSize="18"/>
+            <TextBox x:Name="orgao" FontSize="18"/>
+            <TextBlock Text="Nome da Obra:" FontSize="18"/>
+            <TextBox x:Name="obra" FontSize="18"/>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <Button x:Name="Pesquisar" Content="Pesquisar" Click="Pesquisar_Click"/>
+                <Button x:Name="Limpar" Content="Limpar" Click="Limpar_Click"/>
+            </StackPanel>
+        </StackPanel>
+        </Grid>
+        <Button Grid.Row="2" HorizontalAlignment="Center" x:Name="Voltar" Content="Voltar" Click="Voltar_Click"/>
+    </Grid>
+</Page>

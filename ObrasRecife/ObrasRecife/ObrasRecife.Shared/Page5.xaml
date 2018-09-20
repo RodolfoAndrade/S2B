@@ -1,0 +1,78 @@
+﻿<Page
+    x:Class="ObrasRecife.Page5"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ObrasRecife"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+    <!--<Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Label="Ir para Recife" Click="GoToRecifeBtn_Clicked">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE1C3;"/>
+                    </AppBarButton.Icon>
+                </AppBarButton>
+
+                <AppBarToggleButton Label="Voltar" Click="Voltar_Click">
+                    <AppBarToggleButton.Icon>
+                        <FontIcon Glyph="&#xE0C3;"/>
+                    </AppBarToggleButton.Icon>
+                </AppBarToggleButton>
+                <AppBarToggleButton Label="Toggle Traffic" Click="ToggleTrafficBtn_Clicked">
+                    <AppBarToggleButton.Icon>
+                        <FontIcon Glyph="&#xE0C3;"/>
+                    </AppBarToggleButton.Icon>
+                </AppBarToggleButton>
+
+                <AppBarButton Label="Add Pushpins" Click="AddPushpinsBtn_Clicked">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE141;"/>
+                    </AppBarButton.Icon>
+                </AppBarButton>
+
+                <AppBarButton Label="Add Polyline" Click="AddPolylineBtn_Clicked">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#x303D;"/>
+                    </AppBarButton.Icon>
+                </AppBarButton>
+
+                <AppBarButton Label="Add Polygon" Click="AddPolygonBtn_Clicked">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#x2B1F;"/>
+                    </AppBarButton.Icon>
+                </AppBarButton>
+
+                <AppBarButton Label="Clear Map" Click="ClearMapBtn_Clicked">
+                    <AppBarButton.Icon>
+                        <FontIcon Glyph="&#xE107;"/>
+                    </AppBarButton.Icon>
+                </AppBarButton>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar> -->
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Column="0" HorizontalAlignment="Left" Source="http://cidadao.tce.pe.gov.br/portalcidadao/templates/cidadao2012/images/logoPortal.png" MaxWidth="300"/>
+        <Image Grid.Column="1" HorizontalAlignment="Right" Source="http://www4.tce.pe.gov.br/internet/images/logo_2015_2.png" MaxWidth="300"/>
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" Text="Obras no mapa" FontSize="20" HorizontalAlignment="Center"/>
+        <local:MapView Grid.Row="2" Grid.ColumnSpan="2" x:Name="MyMap" Credentials="AlTJxz3C_T1FWWkvoFjIRhh4uLwu8vtbJ1jpEWrkHQdATS4RHfajqJGsD-hzbn2a" MapServiceToken="YOUR TOKEN" />
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
+        <Button Content="Ir para Recife" HorizontalAlignment="Center" Click="GoToRecifeBtn_Clicked"/>
+        <Button Content="Voltar" HorizontalAlignment="Center" Click="Voltar_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>
+

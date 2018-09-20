@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="ObrasRecife.Page2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ObrasRecife"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="h3"/>
+        <TextBlock x:Name="municipio"/>
+        <TextBlock x:Name="orgao"/>
+        <TextBlock x:Name="tipoIntervencao"/>
+        <TextBlock x:Name="naturezaIntervencao"/>
+        <TextBlock x:Name="dataInicial"/>
+        <TextBlock x:Name="prazoInicial"/>
+        <TextBlock x:Name="prazoAditado"/>
+        <TextBlock x:Name="prazoTotal"/>
+        <TextBlock x:Name="fotos"/>
+        <Button x:ConnectionId='1' Content="Fotos"                     />
+    </StackPanel>
+</Page>
+
